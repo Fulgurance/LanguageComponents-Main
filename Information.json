@@ -1,0 +1,7 @@
+{
+  "name": "LanguageComponents-Main",
+  "url": "https://github.com/Fulgurance/LanguageComponents-Main",
+  "publicKeyUrl": "http://www.slashlinux.io/keyring/Fulgurance.key",
+  "type": "Git",
+  "description": "Port that contain all available languages for the system"
+}
