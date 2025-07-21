@@ -3,12 +3,16 @@ class Target < ISM::VirtualSoftware
     def deploy
         super
 
-        if option("Britain")
-            runLocaledefCommand("-i en_GB -f UTF-8 en_GB.UTF-8")
-        end
+        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("Glibc")
 
-        if option("USA")
-            runLocaledefCommand("-i en_US -f UTF-8 en_US.UTF-8")
+        if usingGlibc
+            if option("Britain")
+                runLocaledefCommand("-i en_GB -f UTF-8 en_GB.UTF-8")
+            end
+
+            if option("USA")
+                runLocaledefCommand("-i en_US -f UTF-8 en_US.UTF-8")
+            end
         end
     end
 
